@@ -1,0 +1,62 @@
+{
+  "name": "teste-sipdigital",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plenarybr/testeSipDigital"
+  },
+  "keywords": [
+    "nodejs",
+    "restful",
+    "api",
+    "expressjs"
+  ],
+  "author": "Alisson Silva",
+  "license": "GPL-3.0",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/plenarybr/testeSipDigital/issues"
+  },
+  "homepage": "https://www.plenary.com.br/",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.14.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.4.0",
+    "winston": "^3.3.3",
+    "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.2.1",
+    "sequelize-cli": "^6.2.0",
+    "sucrase": "^3.17.0",
+    "supertest": "^6.1.1"
+  }
+}

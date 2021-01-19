@@ -1,0 +1,13 @@
+/node_modules
+/coverage
+/build
+/images
+
+# misc
+.DS_Store
+.env
+.env.backup
+info.log
+error.log
+
+npm-debug.log*
