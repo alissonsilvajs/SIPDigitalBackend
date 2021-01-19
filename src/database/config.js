@@ -1,7 +1,7 @@
 module.exports = {
   dialect: 'postgres',
   host: '127.0.0.1',
-  username: 'root',
+  username: 'postgres',
   password: 'thisIsRoot',
   database: 'sipdigital',
   define: {
