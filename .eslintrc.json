@@ -4,7 +4,7 @@
     "node": true,
     "jest": true
   },
-  "extends": ["prettier", "airbnb"],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -12,6 +12,11 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": ["error"]
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
   }
 }

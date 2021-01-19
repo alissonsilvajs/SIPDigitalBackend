@@ -4,22 +4,21 @@ import 'dotenv/config';
 
 import Routes from './routes';
 import './database';
-class App 
-{
-  constructor() 
-  {
-  	this.server = express();
-  	this.middleware();
-  	this.routes();
+
+class App {
+  constructor() {
+    this.server = express();
+    this.middleware();
+    this.routes();
   }
-  middleware()
-  {
-  	this.server.use(cors());
-  	this.server.use(express.json());
+
+  middleware() {
+    this.server.use(cors());
+    this.server.use(express.json());
   }
-  routes()
-  {
-  	this.server.use(Routes);
+
+  routes() {
+    this.server.use(Routes);
   }
 }
 
