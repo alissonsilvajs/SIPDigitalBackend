@@ -1,7 +1,6 @@
 import Sequelize from 'sequelize';
 import databaseConfig from './config';
 
-// Models
 import models from '../app/models/index';
 
 class Database {
