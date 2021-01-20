@@ -5,7 +5,6 @@ export default async (req, res, next) => {
     name: Yup.string().required(),
     description: Yup.string().required(),
     price: Yup.string().required(),
-    image: Yup.string().required(),
   });
 
   if (!(await schema.isValid(req.body))) {

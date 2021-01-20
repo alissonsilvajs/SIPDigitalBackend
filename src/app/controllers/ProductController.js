@@ -14,15 +14,22 @@ class ProductController {
   }
 
   async store(req, res) {
-    const image = req.file.key;
-    const product = await Product.create(image);
+    if (typeof req.file === "undefined") {
+      return res.status(400).send({ error: 'Image is not uploaded' });
+    }
+
+    req.body.image = req.file.key;
+    const product = await Product.create(req.body);
 
     return res.json(product);
   }
 
   async update(req, res) {
-    let product = await Product.findByPk(req.params.id);
+    if (typeof req.file !== "undefined") {
+      req.body.image = req.file.key;
+    }
 
+    let product = await Product.findByPk(req.params.id);
     product = await product.update(req.body);
 
     return res.json(product);
