@@ -1,8 +1,7 @@
 import Sequelize from 'sequelize';
 import databaseConfig from './config';
 
-// Models
-const models = [];
+import models from '../app/models';
 
 class Database {
   constructor() {
@@ -12,12 +11,13 @@ class Database {
   init() {
     this.connection = new Sequelize(databaseConfig);
 
-    models
-      .map((model) => model.init(this.connection))
-      .map((model) => {
-        if (model.associate) model.associate(this.connection.models);
-        return model;
-      });
+    Object.keys(models).forEach((model) => {
+      models[model].init(this.connection);
+
+      if ('associate' in models[model]) {
+        models[model].associate(models);
+      }
+    });
   }
 }
 
